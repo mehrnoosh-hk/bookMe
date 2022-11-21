@@ -31,7 +31,7 @@ jobs:
       
       - name: Lint with flake8
         run: |
-          flake8 core/
+          python -m flake8 core/
       
       - name: Test with pytest
         run: pytest
