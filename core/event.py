@@ -1,5 +1,5 @@
-import datetime
 from core.interval import Interval
+
 
 class Event:
     def __init__(self, name: str) -> None:
