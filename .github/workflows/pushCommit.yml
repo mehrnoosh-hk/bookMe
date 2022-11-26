@@ -30,10 +30,7 @@ jobs:
         run: |
           python -m flake8 core/
 
-      - name: Set Python-Path
-        run:
-          echo "PYTHONPATH='${PYTHONPATH}:`pwd`'" >> $GITHUB_ENV
-
       - name: Test with pytest
         run: |
+          export PYTHONPATH="${PYTHONPATH}:`pwd`"
           pytest
