@@ -6,7 +6,7 @@ class Event:
         if not isinstance(name, str):
             raise ValueError("Event only accepts strings as name")
         self.name = name
-        self.intervals = []
+        self.intervals: list[Interval] = []
 
-    def add_date_time(self, interval: Interval):
+    def add_date_time(self, interval: Interval) -> None:
         self.intervals.append(interval)
