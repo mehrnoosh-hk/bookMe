@@ -9,4 +9,6 @@ class Event:
         self.intervals: list[Interval] = []
 
     def add_date_time(self, interval: Interval) -> None:
+        if not isinstance(interval, Interval):
+            raise TypeError("You can only add time intervals")
         self.intervals.append(interval)
