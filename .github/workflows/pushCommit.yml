@@ -31,7 +31,7 @@ jobs:
           python -m flake8 core/
 
       - name: Type check
-        run: mypy core tests
+        run: mypy core
 
       - name: Test with pytest
         run: |
